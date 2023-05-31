@@ -9,8 +9,8 @@ function solution(a, b) {
     let result = b/checkNum
     
     while(result % 2 === 0) result /= 2
-    
     while(result % 5 === 0) result /= 5
     
     return result === 1 ? 1 : 2; 
 }
+// 77점
