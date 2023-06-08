@@ -12,3 +12,5 @@ function solution(number, k) {
     
     return temp.join("").slice(0, temp.length - k)
 }
+
+// ex) number "555"이고 k=1 number가 중복일 경우 예외처리 다시 [테케 10번x]
