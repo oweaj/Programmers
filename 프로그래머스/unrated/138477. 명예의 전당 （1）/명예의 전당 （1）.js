@@ -3,9 +3,7 @@ function solution(k, score) {
     let temp = []
     
     for (let num of score) {
-        if (temp.length < k) {
-            temp.push(num)
-        }
+        if (temp.length < k) temp.push(num)
         if (num > Math.min(...temp)) {
             temp.pop()
             temp.push(num)
