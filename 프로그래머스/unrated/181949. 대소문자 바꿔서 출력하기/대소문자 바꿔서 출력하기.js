@@ -14,9 +14,9 @@ rl.on('line', function (line) {
     
     for (let item of str) {
         if (item === item.toUpperCase()) {
-            result += (item.toLowerCase())  
+            result += item.toLowerCase()
         } else {
-            result += (item.toUpperCase())
+            result += item.toUpperCase()
         }
     }
     console.log(result)
