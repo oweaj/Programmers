@@ -5,9 +5,9 @@ function solution(babbling) {
     babbling.forEach((el) => {
         for (let a of baby) {
             if (el.includes(a + a)) break
-            el = el.split(a).join("X")
+            el = el.split(a).join(" ").trim()
         }
-        !el.split("X").join("") && count++
+        !el && count++
     })
         
     return count;
