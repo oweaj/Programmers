@@ -1,14 +1,17 @@
 function solution(arr, flag) {
     let result = []
     
-    for (let i = 0; i < flag.length; i++) {
+    arr.forEach((el, i) => {
         if (flag[i]) {
-            result.push(...Array(arr[i] * 2).fill(arr[i]))
+            for (let i = 0; i < el * 2; i++) {
+                result.push(el)
+            }
         } else {
-            let end = result.length
-            result.splice(end - arr[i], arr[i])
+            for (let i = 0; i < el; i++) {
+                result.pop()
+            }
         }
-    }
+    })
     
     return result;
 }
