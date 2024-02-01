@@ -3,11 +3,17 @@ function solution(prices) {
     
     for (let i = 0; i < prices.length; i++) {    
         let second = 0
-        for (let j = i + 1; j < prices.length; j++) {
+        let next = i + 1
+        
+        while (prices.length > next) {
             second++
-            if (prices[i] <= prices[j]) continue
-            if (prices[i] > prices[j]) break
+            if (prices[i] <= prices[next]) {
+                next++
+                continue
+            }
+            if (prices[i] > prices[next]) break
         }
+            
         result.push(second)
     }
 
