@@ -1,11 +1,10 @@
-function solution(s){
-    let check = s.replace(/\(\)/g, "")
+function solution(s) {
     let count = 0
 
-    for (let x of check) {
+    for (let x of s) {
         x === "(" ? count++ : count--
         if (count < 0) return false
     }
-
-    return !count ? true : false
+    
+    return !count
 }
